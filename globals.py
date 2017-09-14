@@ -28,3 +28,11 @@ class Spy:
                 avg=avg+len(Steganography.decode(i.Message))
             avg=avg/(len(self.chat))
         print "Average Words Spoken: ",avg
+#Chat class
+class Chat:
+    def __init__(self,msgImage,timestamp):
+        #Assigning Values
+        self.Message=msgImage
+        self.Timestamp=timestamp
+    def displayMessage(self):
+        print colored(self.Timestamp,'blue'),"\nMessage: ",self.Message,"\n"
