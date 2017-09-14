@@ -1,7 +1,7 @@
 STATUS_MESSAGES=['a','b','c']
-def add_status(current_status_message_):
-    if current_status_message_!= None:
-            print"current status is" + current_status_message_
+def add_status(current_status_message):
+    if current_status_message!= None:
+            print"current status is" + current_status_message
 
     else:
         print"you don't have any status"
@@ -16,11 +16,13 @@ def add_status(current_status_message_):
     elif default.upper()=="Y":
         item_position=1
         for message in STATUS_MESSAGES:
-         print str(item_position)+ "." + str(message)
+            print item_position + ". " + message
+            item_position = item_position + 1
 
-        item_position=item_position+1
-    message_selection=int (raw_input("\nchoose from the older messages"))
-    if len(STATUS_MESSAGES)>= message_selection:
-        updated_status_message=STATUS_MESSAGES[message_selection-1]
 
-    return add_status
+
+        message_selection=int (raw_input("\nchoose from the older messages"))
+        if len(STATUS_MESSAGES)>= message_selection:
+            updated_status_message=STATUS_MESSAGES[message_selection-1]
+
+    return updated_status_message

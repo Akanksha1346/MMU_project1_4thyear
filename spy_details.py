@@ -1,2 +1,3 @@
-spy={'name': 'akki','salutation':'Miss','age':'21',
-'rating':'4.6','is_online':'True'}
+spy={
+'name':'bond','salutation':'miss','age':24,'rating':4.7,'is_online':True
+}
