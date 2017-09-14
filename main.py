@@ -18,7 +18,7 @@ while all:
 if (existing.upper()=="Y"):
     # default user
     all= False
-    start_chat(spy['Name'],spy['age'],spy['rating'],spy['is_online'])
+    start_chat(spy.Name,spy.Age,spy.Rating,spy.is_online)
 elif(existing.upper()=="N"):
     all = False
     check_all = True  # temporary variable
@@ -44,28 +44,28 @@ elif(existing.upper()=="N"):
         else:
             print colored("Enter Again!!!!", 'red')
             # concatenation.
-        spy['name ']= salutation + "." + spy['name']
+        spy.Name = spy.Salutation + "." + spy.Name
     temp_check = True
     while temp_check:
-        spy['Age'] = raw_input("Your Age?")
-        if (re.match(patternage, spy['Age']) != None):
+        spy.Age= raw_input("Your Age?")
+        if (re.match(patternage, spy.Age) != None):
             temp_check = False
-            spy['Age'] = int(spy['Age'])
+            spy.Age= int(spy.Age)
         else:
             print colored("Enter Again!!!!", 'red')
 
     tempcheck = True
     while temp_check:
         spy.Rating = raw_input("Spy rating?")
-        if (re.match(patternrating, spy['Rating']) != None):
+        if (re.match(patternrating, spy.Rating) != None):
             tempcheck = False
-            spy['Rating'] = float(spy['Rating'])
+            spy.Rating = float(spy.Rating)
         else:
             print colored("Enter Again!!!!", 'red')
 
             # Checking If Spy is eligible
             if spy.Rating <= 5.0 and spy.Age > 12 and spy.Age < 50:
-                start_chat(spy.Name, spy.Age, spy.Rating, spy.SpyOnline)
+                start_chat(spy.Name, spy.Age, spy.Rating, spy.is_Online)
                 wholecheck = False
             else:
                 print colored("Invalid Entry!!!!Start From Scratch.", 'red')
