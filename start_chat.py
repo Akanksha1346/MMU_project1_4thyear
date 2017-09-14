@@ -2,8 +2,9 @@
 from add_status import add_status
 from add_friend import add_friend
 from send_message import send_message
-#from read_message import read_message
-
+from read_message import read_message
+from globals import current_status_message
+from read_chat import read_chat
 def start_chat(name,age,rating,status):
     #from globals import current_status_message
     show_menu=True

@@ -7,7 +7,7 @@ def read_message():
 
   #to decode secret messages
   output_path = raw_input("What is the name of the file?")
-  secret_text = Steganography.decode(output_path)
+  secret_text = Steganography.decode()
   new_chat = {
       "message": secret_text,
       "time": datetime.now(),
