@@ -3,6 +3,8 @@ from globals import friends
 from steganography.steganography import Steganography
 from termcolor import colored
 import re
+import colorama
+colorama.init()
 def read_chat():
     #function logic
     friend_choice = select_friend()

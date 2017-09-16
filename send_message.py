@@ -5,27 +5,30 @@ from termcolor import colored
 from datetime import datetime
 #import regular expressions
 import re
+import colorama
+    #initialising colorama
+colorama.init()
 def send_message():
     #function logic
     friend_choice = select_friend()
     #to check If Friend's List Is not Empty
     if friend_choice!=-1:
         pattern='^[A-Za-z][0-9A-Za-z\s]*\.jpg$'#expressions for correct name pattern for image
-        patternsave='^SOS|SAVE ME|IN DANGER|HELP$'
-        a=True
+        patternsave='^SAVE ME|IN DANGER|HELP$'
+        value=True
         #Temporary Variable
         #create message
-        while a:
+        while value:
             original_image = raw_input("Provide the name of the image to hide the message: ")
             if(re.match(pattern,original_image)!=None):
-                a=False
+                value=False
             else:
                 print colored("Please Enter Again!!!!",'red')
-        a=True
-        while a:
+        value=True
+        while value:
             output_image = raw_input("Provide the name of the output image : ")
             if (re.match(pattern, output_image) != None):
-                a = False
+                value = False
         text = raw_input("Enter your message here: ")
         if(len(text)>100):
             #remove friend he/she types more 100 words

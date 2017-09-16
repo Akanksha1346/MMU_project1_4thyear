@@ -1,5 +1,7 @@
 from globals import friends
 from termcolor import colored
+import colorama
+colorama.init()
 def select_friend():
 
     item_number=1

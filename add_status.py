@@ -1,8 +1,12 @@
 from termcolor import colored
+import colorama
+colorama.init()
 STATUS_MESSAGES = ["Spy is Online", "Busy, Call If Urgent"]
 def add_status():
-    temp_check=True#temporary variable
-    check_all=True#temporary variable
+    temp_check=True
+    #temporary variable
+    check_all=True
+    #temporary variable
     while check_all:
         default = raw_input("Do you want to select from older status (y/n)? ")
         if default.upper() == "N":
